@@ -302,7 +302,7 @@ def raw_data(df):
     print('#############################################')
 
     # initial input!
-    raw_data = input("\nWould you like to see raw data? Enter 'y' or 'n'\n").strip().lower()
+    raw_data = input("\nWould you like to see raw data? Enter 'yes' or 'no'\n").strip().lower()
     if raw_data in ("yes", "y"):
         i = 0
 
@@ -315,7 +315,7 @@ def raw_data(df):
             print(df.iloc[i:i+100, :])
             i += 100
 
-            next_raw_data = input("\nNext 100 rows or quit? Enter 'y' or 'n'\n").strip().lower()
+            next_raw_data = input("\nNext 100 rows or quit? Enter 'yes' or 'no'\n").strip().lower()
             if next_raw_data not in ("yes", "y"):
                 break
 
@@ -330,9 +330,13 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter y (yes) or no.\n')
-        if restart.lower() != 'yes' or restart.lower() != 'y':
+        restart = input("\nWould you like to restart? Enter 'yes' or 'no'.\n")
+
+        if restart not in ("yes", "y"):
             break
+
+        #if restart.lower() != 'yes' or restart.lower() != 'y':
+        #    break
 
 if __name__ == "__main__":
 	main()
