@@ -1,15 +1,22 @@
-### Date created
+### created 8/17/2020
 Include the date you created this project and README file.
 
-### Project Title
-Replace the Project Title
+### Udacity - github project
+Udacity - Github project
 
 ### Description
-Describe what your project is about and what it does
+The project is about github which creates and updates github repository
 
 ### Files used
-Include the files used
+Include the files
+- bikeshare.py
+- requirements.txt
+
+Exclude
+- *.csv files
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+- are going to myself because i was working with github
+- githuhb for small tunings of .gitignore file which I used not so frequent
+
 
