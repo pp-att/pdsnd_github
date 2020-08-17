@@ -15,6 +15,7 @@ Include the files
 
 Exclude
 - *.csv files
+- .git/ directory
 
 ### Credits
 - are going to myself because i was working with github
