@@ -80,7 +80,6 @@ def get_filters():
     # degub nebo info ?
     # for testing to not enter it all the time
 
-
     print()
     print('You selected : ',city, ',', month, ',', day)
     print()
@@ -147,7 +146,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -173,14 +171,9 @@ def time_stats(df):
     print('The most common start hour      : ' +
           str(most_common_hour))
 
-    #print('#############################################')
-
     print("\nThis took {} seconds.".format((time.time() - start_time)))
 
-    #print("\nThis took %s seconds." % (time.time() - start_time))
-
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -276,14 +269,6 @@ def user_stats(df):
         #print('Gender - is missing')
         print("No data of user genders")
 
-    #try:
-    #    gender_distribution = df['Gender'].value_counts().to_string()
-    #    print("\nDistribution for each gender:")
-    #    print(gender_distribution)
-    #except KeyError:
-    #    print("No data of user genders")
-
-    # Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_year = str(int(df['Birth Year'].min()))
         print("\nThe oldest person on "
@@ -299,7 +284,6 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def raw_data(df):
 
