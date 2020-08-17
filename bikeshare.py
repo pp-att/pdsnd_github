@@ -260,14 +260,23 @@ def user_stats(df):
     print(user_types)
 
     # Display counts of gender
-    if 'Gender' in df.columns:
-        #print('Gender is OK')
+    #if 'Gender' in df.columns:
+    #    #print('Gender is OK')
+    #    gender_distribution = df['Gender'].value_counts().to_string()
+    #    print("\nDistribution for each gender:")
+    #    print(gender_distribution)
+    #else:
+    #    #print('Gender - is missing')
+    #    print("No data of user genders")
+
+    try:
         gender_distribution = df['Gender'].value_counts().to_string()
         print("\nDistribution for each gender:")
         print(gender_distribution)
-    else:
-        #print('Gender - is missing')
+    except KeyError:
         print("No data of user genders")
+
+
 
     try:
         earliest_birth_year = str(int(df['Birth Year'].min()))
