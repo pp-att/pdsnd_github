@@ -2,8 +2,8 @@
 Include the date you created this project and README file.
 
 ### Udacity - github project
-3.github  - Github project
-2.Python  - bikeshare data project
+- 3.github  - Github project
+- 2.Python  - bikeshare data project
 
 ### Description
 The project is about github which creates and updates github repository
@@ -15,6 +15,7 @@ Include the files
 
 Exclude
 - *.csv files
+- .git/ directory
 
 ### Credits
 - are going to myself because i was working with github
