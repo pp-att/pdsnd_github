@@ -6,9 +6,10 @@
 - 2.Python  - bikeshare data project
 
 ### Description
-- The project is about github which creates and updates github repository
+- The project is about the project bikeshare that was uploaded to github
+- we worked with git commands to train our git skills
 
-### Files used
+### Files
 Include the files
 - bikeshare.py
 - requirements.txt
@@ -17,7 +18,8 @@ Exclude
 - *.csv files
 
 ### Credits
-- are going to myself because i was working with github
-- githuhb for small tunings of .gitignore file which I used not so frequent
+- to myself because i was working with github in the past with some colleagues on the projects
+- to Github for small tunings of .gitignore file which I didn't use so frequently
+
 
 
