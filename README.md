@@ -1,9 +1,13 @@
+### created 8/25/2020
+- added 1.SQL projet files + 2.python project files
+
 ### created 8/17/2020
 - added date when the github project was created
 
 ### Udacity - github project
 - 3.github  - Github project
 - 2.Python  - bikeshare data project
+- 1.SQL     - sql project
 
 ### Description
 - The project is about the project bikeshare that was uploaded to github
