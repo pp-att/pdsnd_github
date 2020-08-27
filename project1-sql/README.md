@@ -1,3 +1,4 @@
+# SQL project 
 
-1.sql project - sql queries
+- The SQL project covers 4 tasks about SQL database
 
