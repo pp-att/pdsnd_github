@@ -16,7 +16,4 @@
 
 ## Credits
 - to myself because i was working with github in the past with some colleagues on the projects
-- to Google for search of things with sql, python, git
-
-
-
+- to Google for searching of things with sql, python, git
