@@ -10,20 +10,16 @@
 -- added date when the github project was created
 
 ## Udacity - github project
-- 3.github  - Github project
-- 2.Python  - bikeshare data project
-- 1.SQL     - sql project
+- 3.github  - Github project (itself)
+- 2.Python  - bikeshare data project (project2 directory)
+- 1.SQL     - sql project (project1 directory)
 
 ## Description
--- each project covers a specific part of the programming
-
--- Exclude files and directories
---- *.csv files
---- .git/ directory
+-- each project covers a specific part of the course
 
 ## Credits
 - to myself because i was working with github in the past with some colleagues on the projects
-- to Github for small tunings of .gitignore file which I didn't use so frequently
+- to Google for search of things with sql, python, git
 
 
 
