@@ -1,4 +1,4 @@
-# bikeshare data ver.0.0.2
+# bikeshare data ver.0.0.3
 
 import time
 import pandas as pd
@@ -267,21 +267,21 @@ def user_stats(df):
     print(user_types)
 
     # Display counts of gender
-    if 'Gender' in df.columns:
-        #print('Gender is OK')
-        gender_distribution = df['Gender'].value_counts().to_string()
-        print("\nDistribution for each gender:")
-        print(gender_distribution)
-    else:
-        #print('Gender - is missing')
-        print("No data of user genders")
-
-    #try:
+    #if 'Gender' in df.columns:
+    #    #print('Gender is OK')
     #    gender_distribution = df['Gender'].value_counts().to_string()
     #    print("\nDistribution for each gender:")
     #    print(gender_distribution)
-    #except KeyError:
+    #else:
+    #    #print('Gender - is missing')
     #    print("No data of user genders")
+
+    try:
+        gender_distribution = df['Gender'].value_counts().to_string()
+        print("\nDistribution for each gender:")
+        print(gender_distribution)
+    except KeyError:
+        print("No data of user genders")
 
     # Display earliest, most recent, and most common year of birth
     try:
