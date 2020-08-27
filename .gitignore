@@ -2,4 +2,5 @@
 .git/
 
 # exclude files
+project2-python/*.csv
 *.csv
