@@ -80,6 +80,7 @@ def get_filters():
     # degub nebo info ?
     # for testing to not enter it all the time
 
+
     print()
     print('You selected : ',city, ',', month, ',', day)
     print()
@@ -146,6 +147,7 @@ def load_data(city, month, day):
 
     return df
 
+
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -171,9 +173,14 @@ def time_stats(df):
     print('The most common start hour      : ' +
           str(most_common_hour))
 
+    #print('#############################################')
+
     print("\nThis took {} seconds.".format((time.time() - start_time)))
 
+    #print("\nThis took %s seconds." % (time.time() - start_time))
+
     print('-'*40)
+
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -260,24 +267,23 @@ def user_stats(df):
     print(user_types)
 
     # Display counts of gender
-    #if 'Gender' in df.columns:
-    #    #print('Gender is OK')
-    #    gender_distribution = df['Gender'].value_counts().to_string()
-    #    print("\nDistribution for each gender:")
-    #    print(gender_distribution)
-    #else:
-    #    #print('Gender - is missing')
-    #    print("No data of user genders")
-
-    try:
+    if 'Gender' in df.columns:
+        #print('Gender is OK')
         gender_distribution = df['Gender'].value_counts().to_string()
         print("\nDistribution for each gender:")
         print(gender_distribution)
-    except KeyError:
+    else:
+        #print('Gender - is missing')
         print("No data of user genders")
 
+    #try:
+    #    gender_distribution = df['Gender'].value_counts().to_string()
+    #    print("\nDistribution for each gender:")
+    #    print(gender_distribution)
+    #except KeyError:
+    #    print("No data of user genders")
 
-
+    # Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_year = str(int(df['Birth Year'].min()))
         print("\nThe oldest person on "
@@ -294,6 +300,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
 def raw_data(df):
 
     print()
@@ -302,7 +309,7 @@ def raw_data(df):
     print('#############################################')
 
     # initial input!
-    raw_data = input("\nWould you like to see raw data? Enter 'yes' or 'no'\n").strip().lower()
+    raw_data = input("\nWould you like to see raw data? Enter 'y' or 'n'\n").strip().lower()
     if raw_data in ("yes", "y"):
         i = 0
 
@@ -315,7 +322,7 @@ def raw_data(df):
             print(df.iloc[i:i+100, :])
             i += 100
 
-            next_raw_data = input("\nNext 100 rows or quit? Enter 'yes' or 'no'\n").strip().lower()
+            next_raw_data = input("\nNext 100 rows or quit? Enter 'y' or 'n'\n").strip().lower()
             if next_raw_data not in ("yes", "y"):
                 break
 
@@ -330,13 +337,9 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input("\nWould you like to restart? Enter 'yes' or 'no'.\n")
-
-        if restart not in ("yes", "y"):
+        restart = input('\nWould you like to restart? Enter y (yes) or no.\n')
+        if restart.lower() != 'yes' or restart.lower() != 'y':
             break
-
-        #if restart.lower() != 'yes' or restart.lower() != 'y':
-        #    break
 
 if __name__ == "__main__":
 	main()
